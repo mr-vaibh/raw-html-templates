@@ -1,0 +1,214 @@
+.nsd-news-item {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  & .nsd-news-item_img {
+    overflow: hidden;
+
+    img {
+      height: 22rem;
+      @include media-breakpoint-down(md) {
+        height: 12rem;
+      }
+      @include media-breakpoint-down(sm) {
+        height: 20rem;
+      }
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      transform: scale(1.2);
+      transition: all 0.5s;
+    }
+  }
+  &.flex {
+    img {
+      height: 19rem;
+    }
+    .nsd-news-item_img {
+      overflow: hidden;
+      @include media-breakpoint-down(md) {
+        width: 0;
+      }
+      @include media-breakpoint-down(sm) {
+        width: auto;
+      }
+    }
+    .nsd-news-item_content {
+      min-width: 20rem;
+      width: 100%;
+    }
+  }
+  &:hover {
+    .nsd-news-item_img img {
+      transform: scale(1);
+    }
+  }
+  & .nsd-news-item_content {
+    min-width: 20rem;
+    @include media-breakpoint-down(lg) {
+      min-width: auto;
+    }
+    &:hover {
+      & .nsd-item__btn .btn-protfolio:before {
+        width: 100%;
+      }
+    }
+    padding: 3rem 2rem;
+    background-color: #fff;
+    & .nsd-item__info {
+      position: relative;
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      vertical-align: middle;
+      margin: 0;
+      clear: both;
+      & .nsd-item__datecreated {
+        font-size: 0.8rem;
+        line-height: 2rem;
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 0.5rem;
+        }
+        text-transform: uppercase;
+
+        letter-spacing: 0.1rem;
+        font-weight: 500;
+        & a {
+          color: white;
+          background: $accent-2;
+          border: 1px solid $accent-2;
+          padding: 5px 10px;
+          transition: all 0.5s;
+          &:hover {
+            color: $accent-2;
+            border: 1px solid $accent-2;
+            background-color: white;
+          }
+        }
+      }
+      & .nsd-item__category {
+        font-size: 0.8rem;
+        line-height: 2rem;
+        text-transform: uppercase;
+        color: $accent-2;
+        letter-spacing: 0.1rem;
+        font-weight: 500;
+        padding: 0 5px;
+        @include media-breakpoint-down(lg) {
+          padding: 0;
+        }
+        & .single-blog__category {
+          background: transparent;
+          padding: 5px 10px;
+          color: $accent-2;
+          border: 1px solid $accent-2;
+          transition: all 0.5s;
+          &:hover {
+            transition: all 0.5s;
+            background: $accent-2;
+            color: $light-2;
+          }
+        }
+      }
+    }
+
+    & .nsd-item__title {
+      padding: 1rem 0 2rem;
+      h4 {
+        font-family: $lora-font;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        @include media-breakpoint-down(lg) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+.c-articleInfo {
+  &_category {
+    margin-top: auto;
+    h2 {
+      font-size: 1.8rem;
+      line-height: 1.3;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: $primary;
+    }
+  }
+  &_author {
+    display: flex;
+    align-items: center;
+    height: auto;
+    &_name {
+      color: $primary;
+      padding: 1rem;
+    }
+    img {
+      border-radius: 50%;
+      width: 5rem;
+      height: auto;
+    }
+  }
+}
+
+.c-social-set {
+  display: flex;
+  margin: 2rem 0 0;
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+  .c-social-set__single {
+    width: 3rem;
+    margin: 0.5rem;
+    @include media-breakpoint-down(lg) {
+      width: 2.5rem;
+    }
+    img {
+      filter: contrast(0.1);
+    }
+    &:hover img {
+      filter: contrast(0.5);
+      transition: all 0.5s;
+      cursor: pointer;
+    }
+  }
+}
+
+.c-banner-figure {
+  position: relative;
+  .c-banner-main {
+    img {
+      width: 90%;
+    }
+  }
+  .c-banner-src {
+    position: absolute;
+    top: 27%;
+    width: 30rem;
+    right: -18%;
+    @include media-breakpoint-down(md) {
+      top: 30%;
+      width: 15rem;
+      right: -10%;
+    }
+    @include media-breakpoint-down(lg) {
+      top: 30%;
+      width: 20rem;
+      right: -1%;
+    }
+  }
+}
+.c-section_image {
+  overflow: hidden;
+  margin: 0.5rem;
+  @include media-breakpoint-down(sm) {
+    margin: 1rem;
+  }
+}
+.c-figure.-offsetRight {
+  @include media-breakpoint-up(lg) {
+    margin-right: -10rem;
+  }
+}

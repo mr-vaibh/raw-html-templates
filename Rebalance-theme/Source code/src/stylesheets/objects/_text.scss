@@ -1,0 +1,69 @@
+.o-text {
+  font-family: $karla-font;
+  font-size: rem(18px);
+  line-height: 2;
+  margin: 5% 0;
+  &.-right-align {
+    width: 70%;
+    margin-left: auto;
+  }
+}
+.s-content p {
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.s-content h1,
+.s-content h2,
+.s-content h3,
+.s-content h4,
+.s-content h5,
+.s-content h6 {
+  margin-top: 3.33333rem;
+  margin-bottom: 1.33333rem;
+  line-height: 1;
+}
+.s-content h3,
+.s-content h4,
+.s-content h5,
+.s-content h6 {
+  font-weight: 500;
+}
+.o-secondary-link {
+  position: relative;
+  &::before {
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    content: '';
+    position: absolute;
+    background: $primary;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+  }
+  &:hover:before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  &.is-active::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+.o-project-info {
+  padding-bottom: 2rem;
+  &__title {
+    font-weight: 700;
+  }
+}
+
+.counter-number {
+  font-size: 2rem;
+  font-family: $lora-font;
+}
+
+.counter-text {
+  margin-bottom: 2rem;
+}

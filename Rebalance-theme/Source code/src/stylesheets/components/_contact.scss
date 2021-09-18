@@ -1,0 +1,236 @@
+form {
+  label {
+    position: relative;
+    font-size: 0.8em;
+    line-height: 2;
+    transition: color 0.3s ease;
+    color: #212121;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.83333em;
+  }
+
+  .error {
+    font-style: italic;
+    color: red;
+    position: absolute;
+    right: 0;
+    font-weight: 300;
+  }
+  & .form-group {
+    padding: 0 10px;
+    margin-bottom: 1.11111em;
+  }
+  & .form-group.w-1\/2 {
+    width: 50%;
+  }
+  & .form-group,
+  & .form-group .wrap-input {
+    position: relative;
+    padding-bottom: 2px;
+    padding-top: 14px;
+  }
+  & .form-group .wrap-input.style01 {
+    border-bottom: 1px solid;
+  }
+  & .form-group .wrap-input.on-focus:after {
+    width: 100%;
+  }
+  & .form-group .wrap-input.input-error:after {
+    width: 100%;
+    border-bottom-color: red !important;
+  }
+
+  & .form-group .wrap-input:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    border-bottom: 1px solid #212121;
+    transition: width 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+      border-bottom-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  & .contact__form-button {
+    padding: 10px;
+    .button {
+      margin: 2rem 0 0;
+      font-size: 1.5rem;
+    }
+    & .button__icon {
+      margin: 0;
+    }
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:hover,
+  select:-webkit-autofill,
+  select:-webkit-autofill:focus,
+  select:-webkit-autofill:hover,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:focus,
+  textarea:-webkit-autofill:hover {
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  .form-control {
+    display: block;
+    width: 100%;
+    height: 1em;
+    padding: 0;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1;
+    color: #212121;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 0 solid #ced4da;
+    border-radius: 0.25em;
+    outline: none !important;
+    box-shadow: none !important;
+    margin-bottom: 0.9em;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &::-ms-expand {
+      background-color: transparent;
+      border: 0;
+    }
+    &#message {
+      height: 5vw;
+    }
+    &:active,
+    &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+    &:focus {
+      color: #212121;
+      background-color: transparent;
+      border-color: #80bdff;
+      outline: 0;
+      box-shadow: 0 0 0 0.2em rgba(0, 123, 255, 0.25);
+    }
+
+    &::placeholder {
+      color: $primary;
+      opacity: 0.3;
+    }
+
+    &:disabled,
+    &[readonly] {
+      background-color: $light-2;
+      opacity: 1;
+    }
+
+    select.form-control:focus::-ms-value {
+      color: $primary;
+      background-color: transparent;
+    }
+
+    .form-control-file,
+    .form-control-range {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.contact-1 {
+  background: $bcg;
+  @include media-breakpoint-up(md) {
+    background: linear-gradient(90deg, rgb(233, 232, 232), 25%, $bcg 25%);
+  }
+  margin-top: rem(-80px);
+  padding-top: 20vh;
+  position: relative;
+  .contact1-img {
+    position: relative;
+    top: 2rem;
+    height: 70vh;
+    object-fit: cover;
+  }
+  .contact-form01 {
+    margin: 3rem 10rem;
+    @include media-breakpoint-down(md) {
+      margin: 2rem 3rem;
+    }
+    @include media-breakpoint-down(sm) {
+      margin: 2rem;
+    }
+    .contact-form-title {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1rem;
+      margin-bottom: rem(120px);
+      @include media-breakpoint-down(md) {
+        margin-bottom: 3rem;
+      }
+      font-family: $karla-font;
+    }
+  }
+  .contact1-CTA {
+    font-size: 5rem;
+    margin: 5rem 0 2rem;
+  }
+}
+.contact-2 {
+  @include media-breakpoint-up(lg) {
+    margin-top: rem(-80px);
+  }
+
+  .contact2-img {
+    position: relative;
+    @include media-breakpoint-up(md) {
+      height: 55vh;
+    }
+    @include media-breakpoint-up(lg) {
+      height: calc(100vh + 80px);
+    }
+
+    object-fit: cover;
+  }
+  .contact-form02 {
+    margin: 8rem 10rem;
+    @include media-breakpoint-down(md) {
+      margin: 3rem;
+    }
+    .contact-form-title {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.5;
+      font-family: $karla-font;
+
+      margin-bottom: rem(80px);
+    }
+  }
+  .contact1-CTA {
+    font-size: 4rem;
+    margin: 5rem 0 2rem;
+  }
+}
+.contact-3 {
+  .contact3-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(105px);
+    @include media-breakpoint-down(md) {
+      font-size: 3.5rem;
+    }
+    text-align: center;
+    line-height: initial;
+  }
+  .c-contact-title {
+    margin-bottom: 1rem;
+    @include media-breakpoint-down(md) {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+  .c-contact-content {
+    @include media-breakpoint-down(md) {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.nsd-logo-parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  & > div {
+    border-color: #0000003b;
+  }
+  & .nsd-logo-child {
+    opacity: 0;
+  }
+}
+
+.nsd-logo-div1 {
+  grid-area: 1 / 1 / 2 / 2;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+.nsd-logo-div2 {
+  grid-area: 1 / 2 / 2 / 3;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+.nsd-logo-div3 {
+  grid-area: 1 / 3 / 2 / 4;
+  border-bottom: 1px solid;
+}
+.nsd-logo-div4 {
+  grid-area: 2 / 1 / 3 / 2;
+  border-right: 1px solid;
+}
+.nsd-logo-div5 {
+  grid-area: 2 / 2 / 3 / 3;
+  border-right: 1px solid;
+}
+.nsd-logo-div6 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.nsd-logo-img {
+  width: 100%;
+  margin: 25px auto;
+  @include media-breakpoint-down(md) {
+    margin: 0;
+  }
+  height: 100px;
+  object-fit: contain;
+  transition: all 0.5s;
+  &:hover {
+    transition: all 0.5s;
+    filter: brightness(0.3);
+  }
+}
+.nsd-logo-div7,
+.nsd-logo-div8 {
+  border-right: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.nsd-logo-div9 {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.nsd-logo-div10 {
+  border-right: 1px solid;
+}
+
+.nsd-logo-div11 {
+  border-right: 1px solid;
+}
+.nsd-logo-2-parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.nsd-logo-2-div1 {
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+.nsd-logo-2-div2 {
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+.nsd-logo-2-div3 {
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+.nsd-logo-2-div4 {
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+.nsd-logo-2-div5 {
+  border-bottom: 1px solid;
+}
+.nsd-logo-2-div6 {
+  border-right: 1px solid;
+}
+.nsd-logo-2-div7 {
+  border-right: 1px solid;
+}
+.nsd-logo-2-div8 {
+  border-right: 1px solid;
+}
+.nsd-logo-2-div9 {
+  border-right: 1px solid;
+}
+
+.nsd-icon-title {
+  font-weight: 300;
+  font-size: 52px;
+  line-height: 60px;
+  /* or 115% */
+
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+.nsd-icon-text {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+  padding-top: 50px;
+  letter-spacing: 0.1px;
+  color: #777777;
+}

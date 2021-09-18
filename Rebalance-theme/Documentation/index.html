@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Template Documentation Template</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css"
+		media="screen, projection">
+	<style type="text/css" media="screen">
+		p,
+		table,
+		hr,
+		.box {
+			margin-bottom: 25px;
+		}
+
+		.box p {
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+
+		<h3 class="center alt">&ldquo;Rebalance - Architecture portfolio&rdquo; Documentation by &ldquo;Sarvar
+			Murad&rdquo; v1.0</h3>
+
+		<hr>
+
+		<h1 class="center">&ldquo;Rebalance - Architecture portfolio HTML5 template&rdquo;</h1>
+
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+						Created: 05/03/2021<br>
+						By: Sarvar Murad<br>
+						Email: <a href="mailto:support@nicesquadthemes.com">support@nicesquadthemes.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->
+
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are
+					beyond the scope of this help file, please feel free to email via my work email <a
+						href="http://themeforest.net/user/nicesquadthemes">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+
+		<hr>
+
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#fileStructure">File Structure</a></li>
+			<li><a href="#webpackStructure">Webpack Structure</a></li>
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#scssFiles">SCSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+			<li><a href="#APIUsage">API Usage</a></li>
+			<li><a href="#">Any additional unique features that need an overview</a></li>
+		</ol>
+
+		<hr>
+
+		<h3 id="fileStructure"><strong>A) File Structure</strong> - <a href="#toc">top</a></h3>
+		<p>Theme mainly comes with 3 main folders</p>
+		<ol>
+			<li>
+				<p>"Build" folder is production folder, generated using webpack. All css and js codes are minified and
+					optimized for the web</p>
+			</li>
+			<li>
+				<p>"Src" folder is development folder, where you can do all the development stuff</p>
+			</li>
+			<li>
+				<p>"Webpack" folder consist of all configurations for the development and production</p>
+			</li>
+			<li>
+				<p>Babel configurations</p>
+			</li>
+			<li>
+				<p>ESlint configurations</p>
+			</li>
+			<li>
+				<p>JS-hint configurations</p>
+			</li>
+			<li>
+				<p>Prettier configurations</p>
+			</li>
+			<li>
+				<p>StyleLint configurations</p>
+			</li>
+			<li>
+				<p>package.json configurations</p>
+			</li>
+			<li>
+				<p>generated stat.json</p>
+			</li>
+		</ol>
+		<hr>
+		<h3 id="webpackStructure"><strong>B) Webpack Structure</strong> - <a href="#toc">top</a></h3>
+		<h4>What's included</h4>
+		<ul>
+			<li>Webpack 4 JavaScript module bundler</li>
+			<li>Babel 7 compiler ES6+ code into a backwards compatible version of JavaScript</li>
+			<li>SASS preprocessor for CSS</li>
+			<li>Autoprefixer for vendor prefixes (browser compability)</li>
+			<li>Eslint JavaScript linter</li>
+			<li>Stylelint CSS/SASS linter</li>
+			<li>Prettier an opinionated code formatter</li>
+			<li>lint-staged run linting and formatting your files that are marked as "staged" via git add before you
+				commit.</li>
+		</ul>
+		<h4>Getting started</h4>
+		<ul>
+			<li>run <strong>npm install</strong> to fetch all the dependencies</li>
+			<li>run <strong>npm run start</strong> to start the webpack-dev-server (localhost:8080 will be opened
+				automatically)</li>
+			<li>start developing</li>
+			<li>when you are done, run <strong>npm run build</strong> to get the production version of your app</li>
+		</ul>
+
+		<h4>Commands</h4>
+		<p>Find all the commands list in package.json folder</p>
+		<img class="img" src="assets/images/carbon -1.png" alt="" />
+		<p>These are the included libraries in the project</p>
+		<img class="img" src="assets/images/carbon-5.png" alt="" />
+		<hr>
+		<h3 id="htmlStructure"><strong>C) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>HTML files are configured using webpack, if you planning to create new HTML please refer to this source code,
+			you can find it in webpack.development.js. Keep in mind that newly created HTML files has to be registered
+			to the webpack.production.js too</p>
+
+		<img class="img" src="assets/images/carbon.png" alt="" />
+		<p>All the inner pages are structured and located inside "inner" folder</p>
+		<p>Because theme uses virtual scroll it calculated the height of the elements, it is recommended to give proper
+			height to components</p>
+		<hr>
+
+
+		<h3 id="scssFiles"><strong>D) SCSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>SCSS file structure is similar to initcss library</p>
+		<p>Please have a look at the library documentation <br> <a
+				href="https://github.com/inuitcss/inuitcss/">https://github.com/inuitcss/inuitcss/</a></p>
+		<p><strong>Note:</strong> Please pay detailed information to ['stylesheet/settings', 'stylesheet/utilities', 'stylesheet/tools'] folders, all stylesheet logic is implemented within these folders</p>
+		<hr>
+		<h3 id="javascript"><strong>E) JavaScript</strong> - <a href="#toc">top</a></h3>
+
+		<p>All JS files are located in src/scripts folder.</p>
+		<p>Theme heavily relies on the <a href="https://github.com/locomotivemtl/locomotive-scroll">Locomotive
+				Scroll</a>. Please have a look to the documentation of the library, in
+			src/scripts/controllers/locomotive-config.js it is initialized</p>
+		<p>Most js files are class based, and divided into components, you can have a look its structure</p>
+
+		<p>In order to enable smooth scrolling, you can do it by changing 'smooth:true' in
+			src/scripts/controllers/locomotive-config.js</p>
+
+		<img class="img" src="assets/images/carbon-6.png" alt="" />
+		<hr>
+
+		<h3 id="credits"><strong>F) Credits</strong> - <a href="#toc">top</a></h3>
+
+		<p>Most of the images which were used in the theme was copyrighted by <a
+				href="https://www.behance.net/zarzorm40e8cf">Mohamed Abd Elnaby</a></p>
+		<p>Before using his portfolios in the theme, permission was asked. Please note that these images are not for
+			commercial use</p>
+
+		<p>Images in Testimonial component [landing 2] were licensed by envato market and watermarked image will be
+			provided, as i don't have privilige to use commercially</p>
+		<p><strong>All human portaits are taken by <a href="https://unsplash.com/">Unsplash</a> and <a
+					href="https://pexels.com/">Pexels</a></strong></p>
+		<hr>
+
+		<h3 id="APIUsage"><strong>G) API Usage</strong> - <a href="#toc">top</a></h3>
+
+		<p>Theme uses two types of API: Instagram and Google maps
+
+		<ul>
+			<li>In order to generate Instagram token please follow this manual: <a
+					href="https://elfsight.com/blog/2016/05/how-to-get-instagram-access-token/">https://elfsight.com/blog/2016/05/how-to-get-instagram-access-token/</a>
+				<br> source code to add Instagram token
+			</li>
+		</ul>
+		<img class="img" src="./assets/images/carbon-3.png" alt="">
+		<ul>
+			<li>In order to generate Google API key please follow this manual: <a
+					href="https://developers.google.com/maps/documentation/javascript/get-api-key">https://developers.google.com/maps/documentation/javascript/get-api-key</a>
+				<br> source code to add Google API key
+			</li>
+		</ul>
+
+		<img class="img" src="./assets/images/carbon-4.png" alt="">
+		<hr>
+		<ul>
+			<li>Style your map here <a href="https://mapstyle.withgoogle.com/">https://mapstyle.withgoogle.com/</a>
+			</li>
+		</ul>
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you
+			if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have
+			a more general question relating to the themes on ThemeForest, you might consider visiting the forums and
+			asking your question in the "Item Discussion" section.</p>
+
+		<p class="append-bottom alt large"><strong>Sarvar Murad</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+
+</html>

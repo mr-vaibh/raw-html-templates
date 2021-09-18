@@ -1,0 +1,109 @@
+.c-badge-wrapper {
+  position: relative;
+  display: block;
+  .c-badge-logo {
+    top: 0;
+    left: 0;
+    height: auto;
+    position: absolute;
+    transform: translate(80px, 63px);
+  }
+}
+
+.c-badge-outline {
+  //animation: rotating 10s linear infinite;
+  width: fit-content;
+}
+.c-badge--wrapper {
+  position: relative;
+  width: 17rem;
+  height: 17rem;
+  @include media-breakpoint-down(sm) {
+    width: 13rem;
+    height: 13rem;
+  }
+  &.cursor {
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    svg {
+      width: 15rem;
+      height: 15rem;
+      top: -2.5rem;
+      left: -2.5rem;
+      .circle-text {
+        letter-spacing: 35px;
+      }
+    }
+  }
+
+  .hello {
+    position: absolute;
+    color: black;
+    font-size: 3rem;
+    top: calc(50% - 3rem);
+    width: 95%;
+    height: 50px;
+    text-align: center;
+    margin: 0;
+    line-height: 1;
+  }
+
+  svg {
+    width: 17rem;
+    height: 17rem;
+    position: absolute;
+    top: calc(50% - 10rem);
+    left: calc(50% - 9rem);
+    overflow: hidden;
+
+    &:after {
+      display: block;
+      content: 'hello';
+    }
+
+    .circle-text {
+      font-size: rem(90px);
+      letter-spacing: 22.5px;
+      width: 100%;
+      fill: black;
+    }
+  }
+}
+.c-badge--cursor {
+  position: relative;
+  width: 15vw;
+  height: 15vw;
+  transition: none;
+  animation: none;
+  &.cursor {
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    svg {
+      width: 15rem;
+      height: 15rem;
+      top: -2.5rem;
+      left: -2.5rem;
+      .circle-text {
+        letter-spacing: 35px;
+      }
+    }
+  }
+
+  svg {
+    width: 15vw;
+    height: 15vw;
+    position: absolute;
+    top: calc(50% - 9vw);
+    left: calc(50% - 8vw);
+    overflow: hidden;
+
+    .circle-text {
+      font-size: 90px;
+      letter-spacing: 22.5px;
+      width: 100%;
+      fill: black;
+    }
+  }
+}

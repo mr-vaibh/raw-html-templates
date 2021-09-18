@@ -1,0 +1,142 @@
+.s-video {
+  height: 45vw;
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  background: #1f1f1f;
+  @include media-breakpoint-down(sm) {
+    height: 20rem;
+  }
+  .pulse {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    & > div {
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      @include media-breakpoint-down(sm) {
+        width: 65%;
+      }
+      height: 100%;
+      opacity: 0.8;
+      border: 2px solid #efeeee;
+      display: block;
+      position: absolute;
+      border-radius: 50%;
+    }
+  }
+  .c-video-badge {
+    top: 50%;
+    left: 50%;
+    width: 7rem;
+    transform: translate(-50%, -50%);
+    height: 7rem;
+    z-index: 2;
+    display: block;
+    background: #efeeee;
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    @include media-breakpoint-down(md) {
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+    .c-video {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:before {
+        position: relative;
+        left: 5px;
+        content: url('../static/icon-play.svg');
+      }
+    }
+  }
+}
+.s-video-preview {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.6;
+  object-fit: cover;
+  position: absolute;
+}
+#player {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  position: fixed;
+  overflow: hidden;
+  background: #1f1f1f;
+  video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    object-fit: cover;
+    position: absolute;
+    @include media-breakpoint-down(md) {
+      object-fit: contain;
+    }
+  }
+}
+.p-controls {
+  z-index: 5;
+  left: calc(100vw / 20 * 2);
+  right: calc(100vw / 20 * 2);
+  bottom: calc(100vw / 20 * 1);
+  height: 1vw;
+  position: absolute;
+  .p-range {
+    top: 0;
+    left: 4.5vw;
+    z-index: 3;
+    width: calc(100% - 4.5vw);
+    appearance: none;
+    position: absolute;
+    background: transparent;
+    -webkit-appearance: none;
+  }
+  .p-progress {
+    right: 0;
+    top: 50%;
+    left: 4.5vw;
+    height: 2px;
+    width: calc(100% - 4.5vw);
+    position: absolute;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+  .p-pause {
+    top: 0;
+    left: 0;
+    height: 1vw;
+    color: #fff;
+    line-height: 1vw;
+    font-weight: bold;
+    position: absolute;
+    font-size: 0.813vw;
+    letter-spacing: 0.104vw;
+    text-transform: uppercase;
+  }
+}
+.p-controls:after {
+  top: 50%;
+  left: 4.5vw;
+  height: 2px;
+  width: calc(100% - 4.5vw);
+  content: '';
+  position: absolute;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+}

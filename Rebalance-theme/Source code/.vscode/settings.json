@@ -1,0 +1,15 @@
+{
+    "jshint.options": {
+        "esversion": 6
+    },
+    "compile-hero.disable-compile-files-on-did-save-code": false,
+    "eslint.format.enable": true,
+    "eslint.options": {
+        "env":{
+            "es6":true
+        },
+        "parserOptions": {
+            "ecmaVersion": 6 // or 7,8,9
+        }
+    }
+}
